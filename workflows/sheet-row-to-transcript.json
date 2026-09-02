@@ -1,0 +1,24 @@
+{
+  "name": "Sheet row to timestamped transcript",
+  "nodes": [
+    {
+      "parameters": {},
+      "id": "manual",
+      "name": "Run workflow",
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [0, 0]
+    },
+    {
+      "parameters": { "url": "={{ $json.youtubeUrl }}", "mode": "auto", "text": false, "waitForCompletion": true },
+      "id": "capslane",
+      "name": "Get timestamped transcript",
+      "type": "n8n-nodes-capslane.capslane",
+      "typeVersion": 1,
+      "position": [260, 0]
+    }
+  ],
+  "connections": { "Run workflow": { "main": [[{ "node": "Get timestamped transcript", "type": "main", "index": 0 }]] } },
+  "active": false,
+  "settings": {}
+}
