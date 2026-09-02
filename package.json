@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-capslane",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "n8n community node for retrieving native or generated YouTube transcripts through Capslane.",
   "type": "module",
   "license": "MIT",
