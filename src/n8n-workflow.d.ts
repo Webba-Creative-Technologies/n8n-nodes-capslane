@@ -18,6 +18,7 @@ declare module 'n8n-workflow' {
     }
   }
   export const NodeConnectionTypes: { Main: 'main' }
+  export function sleep(milliseconds: number): Promise<void>
   export class NodeOperationError extends Error {
     constructor(node: unknown, error: Error, options?: { itemIndex: number })
   }

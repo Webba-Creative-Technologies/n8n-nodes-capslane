@@ -1,5 +1,5 @@
 import type { IDataObject, IExecuteFunctions, INodeExecutionData, INodeType, INodeTypeDescription } from 'n8n-workflow'
-import { NodeConnectionTypes, NodeOperationError } from 'n8n-workflow'
+import { NodeConnectionTypes, NodeOperationError, sleep } from 'n8n-workflow'
 
 export class Capslane implements INodeType {
   description: INodeTypeDescription = {
@@ -42,7 +42,7 @@ export class Capslane implements INodeType {
           const interval = (this.getNodeParameter('interval', index) as number) * 1000
           const deadline = Date.now() + 20 * 60_000
           while (Date.now() < deadline && !('content' in result)) {
-            await new Promise((resolve) => setTimeout(resolve, interval))
+            await sleep(interval)
             result = await this.helpers.httpRequestWithAuthentication.call(this, 'capslaneApi', { method: 'GET', url: `https://capslane.com/v1/transcript/${encodeURIComponent(String(result.jobId))}`, json: true, timeout: 20_000 }) as IDataObject
             if (result.status === 'failed' || result.status === 'cancelled') throw new Error(`Transcript job ${String(result.status)}`)
           }

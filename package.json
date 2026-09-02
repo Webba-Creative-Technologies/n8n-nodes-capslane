@@ -1,21 +1,26 @@
 {
   "name": "n8n-nodes-capslane",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "n8n community node for retrieving native or generated YouTube transcripts through Capslane.",
   "type": "module",
   "license": "MIT",
   "files": ["dist", "workflows", "README.md", "LICENSE"],
-  "scripts": { "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs", "prepare": "npm run build", "test": "node --test test/*.test.mjs" },
+  "homepage": "https://capslane.com/integrations/n8n",
+  "scripts": { "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs", "test": "node --test test/*.test.mjs" },
   "publishConfig": { "access": "public", "provenance": true },
   "repository": { "type": "git", "url": "git+https://github.com/WebbaLuca/n8n-nodes-capslane.git" },
-  "author": "Webba Creative Technologies",
+  "author": {
+    "name": "Webba Creative Technologies",
+    "email": "luca.deguin@webba-creative.com"
+  },
   "keywords": ["n8n-community-node-package", "youtube", "transcript", "captions", "video-to-text", "automation"],
   "n8n": {
     "n8nNodesApiVersion": 1,
+    "strict": true,
     "credentials": ["dist/credentials/CapslaneApi.credentials.js"],
     "nodes": ["dist/nodes/Capslane/Capslane.node.js"]
   },
-  "peerDependencies": { "n8n-workflow": ">=2.0.0" },
+  "peerDependencies": { "n8n-workflow": "*" },
   "peerDependenciesMeta": { "n8n-workflow": { "optional": true } },
   "devDependencies": { "typescript": "5.9.3" }
 }
