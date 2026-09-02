@@ -7,7 +7,7 @@
   "files": ["dist", "workflows", "README.md", "LICENSE"],
   "scripts": { "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs", "prepare": "npm run build", "test": "node --test test/*.test.mjs" },
   "publishConfig": { "access": "public", "provenance": true },
-  "repository": { "type": "git", "url": "https://github.com/WebbaLuca/n8n-nodes-capslane.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/WebbaLuca/n8n-nodes-capslane.git" },
   "author": "Webba Creative Technologies",
   "keywords": ["n8n-community-node-package", "youtube", "transcript", "captions", "video-to-text", "automation"],
   "n8n": {
