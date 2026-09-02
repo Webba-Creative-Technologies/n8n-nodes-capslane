@@ -2,7 +2,7 @@ import type { IAuthenticateGeneric, ICredentialType, INodeProperties } from 'n8n
 
 export class CapslaneApi implements ICredentialType {
   name = 'capslaneApi'
-  displayName = 'Capslane API'
+  displayName = 'Capslane'
   documentationUrl = 'https://capslane.com/docs'
   properties: INodeProperties[] = [
     { displayName: 'API Key', name: 'apiKey', type: 'string', typeOptions: { password: true }, default: '', required: true },
