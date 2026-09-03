@@ -50,7 +50,7 @@ The node returns the Capslane API response. Completed transcripts include `conte
 - [n8n integration guide](https://capslane.com/integrations/n8n)
 - [API reference](https://capslane.com/api-reference)
 - [Dashboard](https://capslane.com/dashboard)
-- [GitHub](https://github.com/WebbaLuca/n8n-nodes-capslane)
+- [GitHub](https://github.com/Webba-Creative-Technologies/n8n-nodes-capslane)
 
 ## License
 

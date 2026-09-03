@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-capslane",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "n8n community node for retrieving native or generated YouTube transcripts through Capslane.",
   "type": "module",
   "license": "MIT",
@@ -8,7 +8,7 @@
   "homepage": "https://capslane.com/integrations/n8n",
   "scripts": { "build": "tsc -p tsconfig.json && node scripts/copy-assets.mjs", "test": "node --test test/*.test.mjs" },
   "publishConfig": { "access": "public", "provenance": true },
-  "repository": { "type": "git", "url": "git+https://github.com/WebbaLuca/n8n-nodes-capslane.git" },
+  "repository": { "type": "git", "url": "git+https://github.com/Webba-Creative-Technologies/n8n-nodes-capslane.git" },
   "author": {
     "name": "Webba Creative Technologies",
     "email": "luca.deguin@webba-creative.com"
