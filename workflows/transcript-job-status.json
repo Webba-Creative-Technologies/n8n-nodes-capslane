@@ -10,7 +10,7 @@
       "position": [0, 0]
     },
     {
-      "parameters": { "url": "={{ $json.youtubeUrl }}", "mode": "generate", "text": true, "waitForCompletion": false },
+      "parameters": { "url": "={{ $json.youtubeUrl }}", "mode": "generate", "text": true, "wait": false },
       "id": "capslane",
       "name": "Start transcription",
       "type": "n8n-nodes-capslane.capslane",

@@ -5,8 +5,8 @@
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
@@ -15,7 +15,7 @@
     "rootDir": ".",
     "skipLibCheck": true,
     "strict": true,
-    "target": "ES2023"
+    "target": "ES2019"
   },
   "include": ["credentials/**/*.ts", "nodes/**/*.ts", "types/**/*.d.ts"]
 }

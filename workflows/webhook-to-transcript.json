@@ -10,7 +10,7 @@
       "position": [0, 0]
     },
     {
-      "parameters": { "url": "={{ $json.body.url }}", "mode": "auto", "text": true, "waitForCompletion": true },
+      "parameters": { "url": "={{ $json.body.url }}", "mode": "auto", "text": true, "wait": true },
       "id": "capslane",
       "name": "Get transcript",
       "type": "n8n-nodes-capslane.capslane",

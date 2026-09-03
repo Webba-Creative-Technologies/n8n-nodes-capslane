@@ -10,7 +10,7 @@
       "position": [0, 0]
     },
     {
-      "parameters": { "url": "={{ $json.youtubeUrl }}", "mode": "auto", "text": false, "waitForCompletion": true },
+      "parameters": { "url": "={{ $json.youtubeUrl }}", "mode": "auto", "text": false, "wait": true },
       "id": "capslane",
       "name": "Get timestamped transcript",
       "type": "n8n-nodes-capslane.capslane",
