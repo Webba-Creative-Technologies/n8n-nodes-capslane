@@ -4,7 +4,9 @@ declare module 'n8n-workflow' {
   export type INodeTypeDescription = Record<string, unknown>
   export type INodeProperties = Record<string, unknown>
   export type IAuthenticateGeneric = Record<string, unknown>
-  export interface ICredentialType { name: string; displayName: string; properties: INodeProperties[] }
+  export type Icon = string | { light: string; dark: string }
+  export type ICredentialTestRequest = { request: Record<string, unknown> }
+  export interface ICredentialType { name: string; displayName: string; properties: INodeProperties[]; icon?: Icon; test?: ICredentialTestRequest }
   export interface INodeType { description: INodeTypeDescription; execute(this: IExecuteFunctions): Promise<INodeExecutionData[][]> }
   export interface IExecuteFunctions {
     getInputData(): INodeExecutionData[]
